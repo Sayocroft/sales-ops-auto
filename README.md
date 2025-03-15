@@ -15,7 +15,7 @@ Sales-Ops-Auto: Automated Sales Operations Analysis
 
 🚀 Project Overview
 
-This project showcases my ability to analyze sales pipeline data, automate reporting, and apply predictive insights using Python. Although the dataset is fictional, the workflow simulates real-world sales operations analysis, including data cleaning, exploratory data analysis (EDA), automated reporting, and predictive modeling.
+This project showcases my ability to analyze sales pipeline data, automate reporting, and apply predictive insights using Python. Although the dataset is fictional (from Kaggle), the workflow simulates real-world sales operations analysis, including data cleaning, exploratory data analysis (EDA), automated reporting, and predictive modeling.
 
 🎯 Objectives
 
