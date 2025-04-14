@@ -1,6 +1,3 @@
-# sales-ops-auto
-Automating sales data cleaning, processing, and reporting using Python &amp; Pandas
-
 Set up VE
 pyenv local 3.11.3
 python -m venv .venv
@@ -9,101 +6,45 @@ pip install --upgrade pip
 pip install jupyterlab
 
 
-Sales-Ops-Auto: Automated Sales Operations Analysis
+- add packages and where i got the data from (kaggle - fictionnal data maybe link)
 
-📊 A data-driven approach to analyzing and optimizing sales pipelines
+# 📊 Sales Pipeline Analysis & Forecasting
 
-🚀 Project Overview
+## 🎯 Project Goal
 
-This project showcases my ability to analyze sales pipeline data, automate reporting, and apply predictive insights using Python. Although the dataset is fictional (from Kaggle), the workflow simulates real-world sales operations analysis, including data cleaning, exploratory data analysis (EDA), automated reporting, and predictive modeling.
+This project merges **Sales Pipeline** and **Account** datasets to uncover meaningful patterns between company characteristics and pipeline behavior. The ultimate goal is to provide insights into factors that increase win rates and prepare for time-series forecasting.
 
-🎯 Objectives
+---
 
-✅ Identify key accounts with the highest deal losses.
-✅ Analyze sales trends and pipeline inefficiencies.
-✅ Automate reporting for sales insights.
-✅ (Bonus) Implement a predictive model for deal success.
+## 🧠 Key Objectives
 
-🛠 Tech Stack
-	•	Python (Pandas, NumPy, Matplotlib, Seaborn)
-	•	Jupyter Notebook (Data Analysis & Visualization)
-	•	Scikit-learn (Predictive Modeling - optional)
+- Identify correlations between deal success and account attributes (e.g., company size, sector).
+- Analyze data hygiene issues impacting forecasting accuracy.
+- Segment companies into SMB, Mid-Market, and Enterprise categories.
+- Evaluate win rates and deal efficiency by industry and company size.
+- Examine time-based trends in deal closing patterns.
 
-📂 Project Structure
+---
 
-sales-ops-auto/
-│── data/                 # (Fake) Sales pipeline dataset  
-│── notebooks/            # Jupyter Notebooks with analysis  
-│   ├── EDA.ipynb         # Exploratory Data Analysis  
-│   ├── lost_deals.ipynb  # Lost Deals Deep Dive  
-│   ├── predictions.ipynb # Predictive Model (Optional)  
-│── reports/              # Auto-generated reports  
-│── README.md             # Project Documentation  
+## 📅 Next Steps
 
-🔍 Exploratory Data Analysis (EDA)
+- Apply time series modeling (eg exponential smoothing, ARIMA).
+- Forecast future closed deal values using "Won" deal trends.
+- Identify seasonal patterns and optimize future sales strategies.
 
-The analysis focuses on lost deals, identifying which accounts contribute the most to revenue loss and understanding patterns in sales performance.
+---
 
-Key Insights
-	•	Top Lost Accounts: Identified the accounts with the highest lost deal values.
-	•	Deal Distribution: Visualized revenue loss across deals.
-	•	Sales Trends: Analyzed seasonal trends and deal stages.
+## 🛠️ Tech Stack
 
-📈 Example Visualization: Distribution of Lost Deal Values
+- Python (pandas, numpy, matplotlib, seaborn)
+- Jupyter Notebooks (via VS Code)
+- Time series: statsmodels, scipy (planned)
 
-import matplotlib.pyplot as plt
+---
 
-lost_deals_df['close_value'].hist(bins=20)
-plt.title("Distribution of Lost Deals Value")
-plt.xlabel("Close Value")
-plt.ylabel("Frequency")
-plt.show()
+## ✨ Insights so far
 
-🔄 Automation & Reporting
-
-To simulate real sales operations automation, I implemented:
-✅ Automated summary reports with key metrics.
-✅ Scheduled scripts to process and analyze data.
-✅ Dynamic dashboards (optional) for visual insights.
-
-Example: Auto-generated summary for lost deals
-
-sum_lost_deals_hott = lost_deals_df[lost_deals_df['account'] == 'Hottechi']['close_value'].sum()
-print(f"The sum of all lost deals by Hottechi is: {sum_lost_deals_hott}")
-
-🔮 Predictive Modeling (Bonus Feature)
-
-As an extra step, I implemented a logistic regression model to predict whether a deal would be won or lost based on sales features.
-
-from sklearn.linear_model import LogisticRegression
-
-X = df[['deal_size', 'industry', 'stage']]
-y = df['status']  # 1 = Won, 0 = Lost
-model = LogisticRegression()
-model.fit(X, y)
-
-✅ Potential Applications:
-	•	Predicting which deals are most likely to close successfully.
-	•	Helping sales teams prioritize high-value opportunities.
-
-🏆 Key Takeaways
-
-✔ Simulates a real-world sales ops workflow.
-✔ Demonstrates automation in sales data processing.
-✔ Showcases predictive insights for sales performance.
-
-📌 Next Steps
-	•	Improve data quality by adding more realistic sales features.
-	•	Expand automation to generate email reports.
-	•	Enhance predictive modeling with more advanced ML techniques.
-
-🎯 How This Project Showcases My Skills
-
-This project demonstrates my ability to:
-✅ Analyze and process sales data.
-✅ Automate reporting and insights generation.
-✅ Apply predictive modeling for sales strategy.
-
-💡 Want to discuss sales data automation? Let’s connect! 🚀
-
-Would you like any modifications or additional sections?
+- Early pipeline stages often lack close values → poor forecasting inputs.
+- SMBs show high deal value per employee, but with more variability.
+- Industry + company size segmentation reveals clear win-rate patterns.
+- Strong seasonality suggests potential for improved quarterly planning.
