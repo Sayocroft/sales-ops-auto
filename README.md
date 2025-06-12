@@ -6,7 +6,7 @@ pip install --upgrade pip
 pip install jupyterlab
 
 
-- add packages and where i got the data from (kaggle - fictionnal data maybe link)
+Fictionnal Data from Kaggle 
 
 # 📊 Sales Pipeline Analysis & Forecasting
 
